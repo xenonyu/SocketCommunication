@@ -16,7 +16,6 @@ public class Server {
                 Socket socket = serverSocket.accept();
                 new Thread(new ServerListen(socket)).start();
                 new Thread(new ServerSend(socket)).start();
-
             }
         } catch (IOException e) {
             e.printStackTrace();
